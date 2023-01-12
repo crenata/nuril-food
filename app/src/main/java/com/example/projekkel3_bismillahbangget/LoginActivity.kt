@@ -41,4 +41,9 @@ class LoginActivity : AppCompatActivity() {
             startActivity(signupIntent)
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

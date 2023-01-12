@@ -10,8 +10,6 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 
 class SettingActivity : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
@@ -23,5 +21,10 @@ class SettingActivity : AppCompatActivity() {
             val moveaboutus = Intent(this, AboutUsActivity::class.java)
             startActivity(moveaboutus)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

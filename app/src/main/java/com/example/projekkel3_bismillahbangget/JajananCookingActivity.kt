@@ -34,4 +34,9 @@ class JajananCookingActivity : AppCompatActivity() {
         bahanText.text = aBahan
         langkahText.text = aLangkah
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
